@@ -1,88 +1,1074 @@
 <!DOCTYPE html>
-<html lang="in">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+
+    <title>Portfolio | Jonas</title>
+
     <link rel="stylesheet" href="./styles/styles.css">
 
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+
+    <!-- =====================================================
+         FUNDO
+    ====================================================== -->
+
+    <div class="background-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
     <header class="cabecalho">
-        <navn class="cabecalho__menu">
+
+        <nav class="cabecalho__menu">
+
             <a
-             class="cabecalho__menu__link" href="index.html">Home</a>
-            <a class="cabecalho__menu__link" href="about.html">Sobre min</a>
-        </navn>
+                class="cabecalho__menu__link"
+                href="index.html">
+                Home
+            </a>
+
+            <a
+                class="cabecalho__menu__link"
+                href="about.html">
+                Sobre mim
+            </a>
+
+        </nav>
+
     </header>
+
+
+    <!-- =====================================================
+         CONTEÚDO PRINCIPAL
+    ====================================================== -->
+
     <main class="apresentacao">
+
+
+        <!-- =================================================
+             TEXTO
+        ================================================== -->
+
         <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">Eleve seu negócio digital a outro nível <strong class="titulo-destaque">com um Front-end de qualidade!</strong></h1>
-            <p class="apresentacao__conteudo__texto">
-                Olá! Sou Jonas Laranjeira Alves, desenvolvedor Front-end com especialidade em React, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?
-            </p>
+
+            <h1 class="apresentacao__conteudo__titulo">
+
+                Eleve seu negócio digital a outro nível
+
+                <strong class="titulo-destaque">
+                    com um Front-end de qualidade!
+                </strong>
+
+            </h1>
+
+
             <div class="apresentacao__links">
-                <h2 class="apresentacao__links__subtitulos">Acesse minhas redes:
+
+                <h2 class="apresentacao__links__subtitulos">
+                    Acesse minhas redes:
                 </h2>
 
-                <a class="apresentacao__links__navegacao
-                " href="https://github.com/jonas99kmn">
 
-                    <img src="assets/github-32.png" alt="">
+                <a
+                    class="apresentacao__links__navegacao"
+                    href="https://github.com/jonas99kmn"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <img
+                        src="./assets/github-32.png"
+                        alt="GitHub">
+
                     Github
+
                 </a>
 
-                <a class="apresentacao__links__navegacao
-                " href="https://www.linkedin.com/in/jonas-desenvolvedor-web-front-end/">
-                    <img src="assets/linkedin-30.png" alt="">
-                    linkedin
+
+                <a
+                    class="apresentacao__links__navegacao"
+                    href="https://www.linkedin.com/in/jonas-desenvolvedor-web-front-end/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <img
+                        src="./assets/linkedin-30.png"
+                        alt="LinkedIn">
+
+                    LinkedIn
+
                 </a>
 
-                <a class="apresentacao__links__navegacao
-                " href="https://www.instagram.com/jonasdesenvolvedorfrontend/" >
-                    <img src="assets/instagram-30.png" alt="">
+
+                <a
+                    class="apresentacao__links__navegacao"
+                    href="https://www.instagram.com/jonasdesenvolvedorfrontend/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    <img
+                        src="./assets/instagram-30.png"
+                        alt="Instagram">
+
                     Instagram
+
                 </a>
-               
 
-                 
             </div>
+
         </section>
-     <div class="box">
-        <div class="box__content">
-            
-           <div class="box__front">
-             <img class="imagem__js" 
-             src="/assets/jonas-img2b.jpg" alt="">
-           </div>
 
-           <div class="box__back">
-              <img class="imagem__sc" 
-              src="/assets/scorpion2_ (1).jpg" alt="">
-           </div>
 
+
+        <!-- =================================================
+             CARD + BORDA ELÉTRICA
+        ================================================== -->
+
+        <div class="electric-border">
+
+
+            <!-- CANVAS DA BORDA -->
+
+            <div class="eb-canvas-container">
+
+                <canvas class="eb-canvas"></canvas>
+
+            </div>
+
+
+            <!-- CAMADAS DE BRILHO -->
+
+            <div class="eb-layers">
+
+                <div class="eb-glow-1"></div>
+
+                <div class="eb-glow-2"></div>
+
+                <div class="eb-background-glow"></div>
+
+            </div>
+
+
+            <!-- CONTEÚDO -->
+
+            <div class="eb-content">
+
+
+                <!-- =================================================
+                     CARD 3D
+                ================================================== -->
+
+                <div class="box">
+
+
+                    <div class="box__content">
+
+
+                        <!-- FRENTE -->
+
+                        <div class="box__front">
+
+                            <img
+                                class="imagem__js"
+                                src="./assets/jonas-img2b.jpg"
+                                alt="Foto de Jonas">
+
+                        </div>
+
+
+                        <!-- VERSO -->
+
+                        <div class="box__back">
+
+                            <img
+                                class="imagem__sc"
+                                src="./assets/scorpion2_ (1).jpg"
+                                alt="Scorpion">
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- TEXTO DO CARD -->
+
+                    <h2 class="tex_animação"></h2>
+
+
+                </div>
+
+            </div>
 
         </div>
-    
-     </div>  
-       
-
-
 
     </main>
-    <footer>
-        <p class="rodape">
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="rodape">
+
+        <p>
             Desenvolvido por Jonas
         </p>
+
     </footer>
-    <!-- codigo2 -->
-    <a href="#">
-        <span></span><span></span>
-        <span></span><span></span>
-    </a> 
 
-   
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        /* =================================================
+           ELECTRIC BORDER
+        ================================================== */
+
+        const electricBorder =
+            document.querySelector(".electric-border");
+
+        const canvas =
+            document.querySelector(".eb-canvas");
+
+        const ctx =
+            canvas.getContext("2d");
+
+
+        /* CONFIGURAÇÕES */
+
+        const electricColor = "#7df9ff";
+
+        const speed = 1;
+
+        const chaos = 0.12;
+
+        const borderRadius = 16;
+
+        const thickness = 2;
+
+        const borderOffset = 60;
+
+        const displacement = 60;
+
+
+        let width = 0;
+
+        let height = 0;
+
+        let time = 0;
+
+        let lastFrameTime = performance.now();
+
+
+
+        /* =================================================
+           RANDOM
+        ================================================== */
+
+        function random(x) {
+
+            return (
+                Math.sin(x * 12.9898) *
+                43758.5453
+            ) % 1;
+
+        }
+
+
+
+        /* =================================================
+           NOISE 2D
+        ================================================== */
+
+        function noise2D(x, y) {
+
+            const i = Math.floor(x);
+
+            const j = Math.floor(y);
+
+            const fx = x - i;
+
+            const fy = y - j;
+
+
+            const a =
+                random(i + j * 57);
+
+            const b =
+                random(i + 1 + j * 57);
+
+            const c =
+                random(i + (j + 1) * 57);
+
+            const d =
+                random(i + 1 + (j + 1) * 57);
+
+
+            const ux =
+                fx * fx * (3 - 2 * fx);
+
+            const uy =
+                fy * fy * (3 - 2 * fy);
+
+
+            return (
+
+                a * (1 - ux) * (1 - uy) +
+
+                b * ux * (1 - uy) +
+
+                c * (1 - ux) * uy +
+
+                d * ux * uy
+
+            );
+
+        }
+
+
+
+        /* =================================================
+           OCTAVED NOISE
+        ================================================== */
+
+        function octavedNoise(
+            x,
+            octaves,
+            lacunarity,
+            gain,
+            amplitude,
+            frequency,
+            currentTime,
+            seed
+        ) {
+
+            let result = 0;
+
+            let currentAmplitude = amplitude;
+
+            let currentFrequency = frequency;
+
+
+            for (
+                let i = 0;
+                i < octaves;
+                i++
+            ) {
+
+                result +=
+                    currentAmplitude *
+                    noise2D(
+                        currentFrequency * x +
+                        seed * 100,
+
+                        currentTime *
+                        currentFrequency *
+                        0.3
+                    );
+
+
+                currentFrequency *=
+                    lacunarity;
+
+                currentAmplitude *=
+                    gain;
+
+            }
+
+
+            return result;
+
+        }
+
+
+
+        /* =================================================
+           CANTO
+        ================================================== */
+
+        function getCornerPoint(
+            centerX,
+            centerY,
+            radius,
+            startAngle,
+            arcLength,
+            progress
+        ) {
+
+            const angle =
+                startAngle +
+                progress * arcLength;
+
+
+            return {
+
+                x:
+                    centerX +
+                    radius *
+                    Math.cos(angle),
+
+                y:
+                    centerY +
+                    radius *
+                    Math.sin(angle)
+
+            };
+
+        }
+
+
+
+        /* =================================================
+           RETÂNGULO ARREDONDADO
+        ================================================== */
+
+        function getRoundedRectPoint(
+            t,
+            left,
+            top,
+            rectWidth,
+            rectHeight,
+            radius
+        ) {
+
+            const straightWidth =
+                rectWidth - 2 * radius;
+
+            const straightHeight =
+                rectHeight - 2 * radius;
+
+
+            const cornerArc =
+                Math.PI * radius / 2;
+
+
+            const totalPerimeter =
+                2 * straightWidth +
+                2 * straightHeight +
+                4 * cornerArc;
+
+
+            const distance =
+                t * totalPerimeter;
+
+
+            let accumulated = 0;
+
+
+            /* TOPO */
+
+            if (
+                distance <=
+                accumulated + straightWidth
+            ) {
+
+                const progress =
+                    (distance - accumulated) /
+                    straightWidth;
+
+
+                return {
+
+                    x:
+                        left +
+                        radius +
+                        progress *
+                        straightWidth,
+
+                    y: top
+
+                };
+
+            }
+
+
+            accumulated += straightWidth;
+
+
+
+            /* CANTO SUPERIOR DIREITO */
+
+            if (
+                distance <=
+                accumulated + cornerArc
+            ) {
+
+                const progress =
+                    (distance - accumulated) /
+                    cornerArc;
+
+
+                return getCornerPoint(
+
+                    left +
+                    rectWidth -
+                    radius,
+
+                    top +
+                    radius,
+
+                    radius,
+
+                    -Math.PI / 2,
+
+                    Math.PI / 2,
+
+                    progress
+
+                );
+
+            }
+
+
+            accumulated += cornerArc;
+
+
+
+            /* DIREITA */
+
+            if (
+                distance <=
+                accumulated + straightHeight
+            ) {
+
+                const progress =
+                    (distance - accumulated) /
+                    straightHeight;
+
+
+                return {
+
+                    x:
+                        left +
+                        rectWidth,
+
+                    y:
+                        top +
+                        radius +
+                        progress *
+                        straightHeight
+
+                };
+
+            }
+
+
+            accumulated += straightHeight;
+
+
+
+            /* CANTO INFERIOR DIREITO */
+
+            if (
+                distance <=
+                accumulated + cornerArc
+            ) {
+
+                const progress =
+                    (distance - accumulated) /
+                    cornerArc;
+
+
+                return getCornerPoint(
+
+                    left +
+                    rectWidth -
+                    radius,
+
+                    top +
+                    rectHeight -
+                    radius,
+
+                    radius,
+
+                    0,
+
+                    Math.PI / 2,
+
+                    progress
+
+                );
+
+            }
+
+
+            accumulated += cornerArc;
+
+
+
+            /* INFERIOR */
+
+            if (
+                distance <=
+                accumulated + straightWidth
+            ) {
+
+                const progress =
+                    (distance - accumulated) /
+                    straightWidth;
+
+
+                return {
+
+                    x:
+                        left +
+                        rectWidth -
+                        radius -
+                        progress *
+                        straightWidth,
+
+                    y:
+                        top +
+                        rectHeight
+
+                };
+
+            }
+
+
+            accumulated += straightWidth;
+
+
+
+            /* CANTO INFERIOR ESQUERDO */
+
+            if (
+                distance <=
+                accumulated + cornerArc
+            ) {
+
+                const progress =
+                    (distance - accumulated) /
+                    cornerArc;
+
+
+                return getCornerPoint(
+
+                    left + radius,
+
+                    top +
+                    rectHeight -
+                    radius,
+
+                    radius,
+
+                    Math.PI / 2,
+
+                    Math.PI / 2,
+
+                    progress
+
+                );
+
+            }
+
+
+            accumulated += cornerArc;
+
+
+
+            /* ESQUERDA */
+
+            if (
+                distance <=
+                accumulated + straightHeight
+            ) {
+
+                const progress =
+                    (distance - accumulated) /
+                    straightHeight;
+
+
+                return {
+
+                    x: left,
+
+                    y:
+                        top +
+                        rectHeight -
+                        radius -
+                        progress *
+                        straightHeight
+
+                };
+
+            }
+
+
+            accumulated += straightHeight;
+
+
+
+            /* CANTO SUPERIOR ESQUERDO */
+
+            const progress =
+                (distance - accumulated) /
+                cornerArc;
+
+
+            return getCornerPoint(
+
+                left + radius,
+
+                top + radius,
+
+                radius,
+
+                Math.PI,
+
+                Math.PI / 2,
+
+                progress
+
+            );
+
+        }
+
+
+
+        /* =================================================
+           TAMANHO DO CANVAS
+        ================================================== */
+
+        function updateSize() {
+
+            const rect =
+                electricBorder.getBoundingClientRect();
+
+
+            width =
+                rect.width +
+                borderOffset * 2;
+
+
+            height =
+                rect.height +
+                borderOffset * 2;
+
+
+            const dpr =
+                Math.min(
+                    window.devicePixelRatio || 1,
+                    2
+                );
+
+
+            canvas.width =
+                width * dpr;
+
+
+            canvas.height =
+                height * dpr;
+
+
+            canvas.style.width =
+                width + "px";
+
+
+            canvas.style.height =
+                height + "px";
+
+        }
+
+
+
+        /* =================================================
+           DESENHO
+        ================================================== */
+
+        function drawElectricBorder(currentTime) {
+
+            const deltaTime =
+                (
+                    currentTime -
+                    lastFrameTime
+                ) / 1000;
+
+
+            time +=
+                deltaTime *
+                speed;
+
+
+            lastFrameTime =
+                currentTime;
+
+
+            const dpr =
+                Math.min(
+                    window.devicePixelRatio || 1,
+                    2
+                );
+
+
+            ctx.setTransform(
+                dpr,
+                0,
+                0,
+                dpr,
+                0,
+                0
+            );
+
+
+            ctx.clearRect(
+                0,
+                0,
+                width,
+                height
+            );
+
+
+            ctx.strokeStyle =
+                electricColor;
+
+            ctx.lineWidth =
+                thickness;
+
+            ctx.lineCap =
+                "round";
+
+            ctx.lineJoin =
+                "round";
+
+
+            const left =
+                borderOffset;
+
+            const top =
+                borderOffset;
+
+
+            const borderWidth =
+                width -
+                borderOffset * 2;
+
+
+            const borderHeight =
+                height -
+                borderOffset * 2;
+
+
+            const maxRadius =
+                Math.min(
+                    borderWidth,
+                    borderHeight
+                ) / 2;
+
+
+            const radius =
+                Math.min(
+                    borderRadius,
+                    maxRadius
+                );
+
+
+            const perimeter =
+                2 *
+                (
+                    borderWidth +
+                    borderHeight
+                ) +
+                2 *
+                Math.PI *
+                radius;
+
+
+            const sampleCount =
+                Math.floor(
+                    perimeter / 2
+                );
+
+
+            ctx.beginPath();
+
+
+            for (
+                let i = 0;
+                i <= sampleCount;
+                i++
+            ) {
+
+                const progress =
+                    i /
+                    sampleCount;
+
+
+                const point =
+                    getRoundedRectPoint(
+                        progress,
+                        left,
+                        top,
+                        borderWidth,
+                        borderHeight,
+                        radius
+                    );
+
+
+                const xNoise =
+                    octavedNoise(
+                        progress * 8,
+                        10,
+                        1.6,
+                        0.7,
+                        chaos,
+                        10,
+                        time,
+                        0
+                    );
+
+
+                const yNoise =
+                    octavedNoise(
+                        progress * 8,
+                        10,
+                        1.6,
+                        0.7,
+                        chaos,
+                        10,
+                        time,
+                        1
+                    );
+
+
+                const x =
+                    point.x +
+                    xNoise *
+                    displacement;
+
+
+                const y =
+                    point.y +
+                    yNoise *
+                    displacement;
+
+
+                if (i === 0) {
+
+                    ctx.moveTo(x, y);
+
+                } else {
+
+                    ctx.lineTo(x, y);
+
+                }
+
+            }
+
+
+            ctx.closePath();
+
+            ctx.stroke();
+
+
+            requestAnimationFrame(
+                drawElectricBorder
+            );
+
+        }
+
+
+
+        /* =================================================
+           INICIAR BORDA
+        ================================================== */
+
+        updateSize();
+
+
+        window.addEventListener(
+            "resize",
+            updateSize
+        );
+
+
+        const resizeObserver =
+            new ResizeObserver(
+                updateSize
+            );
+
+
+        resizeObserver.observe(
+            electricBorder
+        );
+
+
+        requestAnimationFrame(
+            drawElectricBorder
+        );
+
+
+
+        /* =================================================
+           EFEITO DE DIGITAÇÃO
+        ================================================== */
+
+        const texto =
+            document.querySelector(
+                ".tex_animação"
+            );
+
+
+        const frase =
+            "Olá, meu nome é JONAS.";
+
+
+        let indice = 0;
+
+
+        function escreverTexto() {
+
+            if (
+                indice <
+                frase.length
+            ) {
+
+                texto.textContent =
+                    frase.substring(
+                        0,
+                        indice + 1
+                    );
+
+
+                indice++;
+
+
+                setTimeout(
+                    escreverTexto,
+                    100
+                );
+
+            }
+
+        }
+
+
+        escreverTexto();
+
+    </script>
+
 </body>
-</html>
 
+</html>

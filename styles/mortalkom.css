@@ -1,102 +1,509 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--fonte-seundaria);
-    gap: 100px;
+
+/* =====================================================
+   CONFIGURAÇÕES
+===================================================== */
+
+:root {
+    --fonte-secundaria: 'Montserrat', sans-serif;
+
+    --azul: #7df9ff;
+    --azul-escuro: #010718;
+    --branco: #ffffff;
 }
 
-.apresentacao__conteudo{
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   FUNDO ANIMADO
+===================================================== */
+
+body {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #062235 0%,
+            #010718 45%,
+            #00030a 100%
+        );
+}
+
+
+/* =====================================================
+   CAMADA DE PARTÍCULAS
+===================================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: -100px;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background-image:
+
+        radial-gradient(
+            circle,
+            rgba(125, 249, 255, 0.8) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    opacity: 0.28;
+
+    animation:
+        particulas 25s linear infinite;
+}
+
+
+/* =====================================================
+   LUZES ANIMADAS
+===================================================== */
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(0, 140, 255, 0.20),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(0, 229, 255, 0.16),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(0, 80, 255, 0.15),
+            transparent 30%
+        );
+
+    animation:
+        luzes 12s ease-in-out infinite alternate;
+}
+
+
+/* =====================================================
+   ANIMAÇÃO DAS PARTÍCULAS
+===================================================== */
+
+@keyframes particulas {
+
+    0% {
+        transform:
+            translate(0, 0);
+    }
+
+    50% {
+        transform:
+            translate(-35px, -45px);
+    }
+
+    100% {
+        transform:
+            translate(0, 0);
+    }
+}
+
+
+/* =====================================================
+   ANIMAÇÃO DAS LUZES
+===================================================== */
+
+@keyframes luzes {
+
+    0% {
+        transform:
+            scale(1)
+            translate(0, 0);
+
+        opacity: 0.55;
+    }
+
+    50% {
+        transform:
+            scale(1.12)
+            translate(30px, -20px);
+
+        opacity: 0.85;
+    }
+
+    100% {
+        transform:
+            scale(1)
+            translate(-20px, 30px);
+
+        opacity: 0.55;
+    }
+}
+
+
+/* =====================================================
+   CONTEÚDO FICA NA FRENTE DO FUNDO
+===================================================== */
+
+.cabecalho,
+.apresentacao,
+footer {
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   CONTEÚDO
+===================================================== */
+
+.apresentacao__conteudo {
+
     gap: 20px;
 }
-.controle{
+
+
+/* =====================================================
+   CONTROLE DE ÁUDIO
+===================================================== */
+
+.controle {
+
     width: 5px;
+
     height: 70px;
+
     margin-left: 15px;
+
     align-items: baseline;
 }
 
-/* caixa com os cards do martal combat */
-.cont__mortalk{
-    
-    width: 70%;   /*largura da aixa */
-    align-items: flex-start;
+
+/* =====================================================
+   CAIXA DOS CARDS
+===================================================== */
+
+.cont__mortalk {
+
+    width: 70%;
+
     display: flex;
-    background-color: rgba(0, 0, 0, 0.426);
-    gap: 2px;
-} 
 
- /* caixa com as imagens */
-.morta1{
-    border: solid 1px white;
-    padding: 0% 0%;
-    justify-content: center;
-	border-radius: 10px;
-	width: 350px;
-	height: 700px;
-	display:flex;
-	overflow: hidden;
-    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 8px;
+
+    padding: 10px;
+
+    position: relative;
+
+    z-index: 2;
+
+    background:
+        rgba(0, 0, 0, 0.42);
+
+    border:
+        1px solid
+        rgba(125, 249, 255, 0.15);
+
+    border-radius: 15px;
+
+    backdrop-filter:
+        blur(4px);
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 0, 0, 0.45);
 }
- /* caixa com as imagens */
-.morta2{
-    border: solid 1px white;
-    padding: 0% 0%;
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.morta1,
+.morta2,
+.morta3 {
+
+    position: relative;
+
+    width: 350px;
+
+    height: 700px;
+
+    display: flex;
+
+    flex-direction: column;
+
     justify-content: center;
-	border-radius: 10px;
-	width: 350px;
-	height: 700px;
-    align-items: self-start;
-	display:flex;
-	overflow: hidden;
-	margin-top: 2px;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    border:
+        1px solid
+        white;
+
+    border-radius: 10px;
+
+    background: #000;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* =====================================================
+   POSIÇÃO DOS CARDS
+===================================================== */
+
+.morta2 {
+
+    margin-top: 2px;
+
     margin-left: 5px;
-    flex-direction: column;
-    align-items: stretch;
 }
 
- /* caixa com as imagens */
-.morta3{
-    border: solid 1px white;
-    padding: 0% 0%;
-    justify-content: center;
-	border-radius: 10px;
-	width: 350px;
-	height: 700px;
-    align-items: self-start;
-	display:flex;
-	overflow: hidden;
-	margin-top: 2px;
+
+.morta3 {
+
+    margin-top: 2px;
+
     margin-left: 5px;
-    flex-direction: column;
-    align-items: stretch;
 }
 
-.img-card{
-    align-items: baseline;
+
+/* =====================================================
+   IMAGENS
+===================================================== */
+
+.img-card {
+
     width: 100%;
+
     height: 100%;
-    object-fit: fill;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
 }
+
+
+/* =====================================================
+   HOVER DOS CARDS
+===================================================== */
+
+.morta1:hover,
+.morta2:hover,
+.morta3:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        var(--azul);
+
+    box-shadow:
+
+        0 0 10px
+        rgba(125, 249, 255, 0.8),
+
+        0 0 30px
+        rgba(125, 249, 255, 0.35),
+
+        0 0 60px
+        rgba(125, 249, 255, 0.15);
+}
+
+
+/* =====================================================
+   ZOOM NAS IMAGENS
+===================================================== */
+
+.morta1:hover .img-card,
+.morta2:hover .img-card,
+.morta3:hover .img-card {
+
+    transform:
+        scale(1.05);
+}
+
+
+/* =====================================================
+   BRILHO SOBRE OS CARDS
+===================================================== */
+
+.morta1::after,
+.morta2::after,
+.morta3::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 30%,
+            rgba(125, 249, 255, 0.12),
+            transparent 70%
+        );
+
+    transform:
+        translateX(-100%);
+
+    transition:
+        transform 0.8s ease;
+}
+
+
+.morta1:hover::after,
+.morta2:hover::after,
+.morta3:hover::after {
+
+    transform:
+        translateX(100%);
+}
+
+
+/* =====================================================
+   BRILHO INTERNO
+===================================================== */
+
+.morta1::before,
+.morta2::before,
+.morta3::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    border-radius: 10px;
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(125, 249, 255, 0.12);
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
 
 @media (max-width: 1200px) {
 
-   .cont__mortalk{
-    justify-content: center;
-   }
-   .morta1{
-    width: 30vh;
-    height: 30vh;
-   }
-   .morta2{
-    width: 30vh;
-    height: 30vh;
-   }
-   .morta3{
-    width: 30vh;
-    height: 30vh;
-   }
+    .cont__mortalk {
 
+        width: 90%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+    }
+
+
+    .morta1,
+    .morta2,
+    .morta3 {
+
+        width: 30vh;
+
+        height: 30vh;
+    }
+}
+
+
+/* =====================================================
+   TABLET / CELULAR
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .cont__mortalk {
+
+        width: 95%;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .morta1,
+    .morta2,
+    .morta3 {
+
+        width: 280px;
+
+        height: 450px;
+
+        margin:
+            5px 0;
+    }
+}
+
+
+/* =====================================================
+   CELULAR PEQUENO
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .morta1,
+    .morta2,
+    .morta3 {
+
+        width: 240px;
+
+        height: 380px;
+    }
 }
